@@ -5,7 +5,6 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
-// const morgan = require("morgan");
 
 const ports = {
     http: 8080,
@@ -18,9 +17,6 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
-
-// Middleware
-// app.use(morgan("dev"));
 
 // Routes
 app.get("/", (req, res) => {
